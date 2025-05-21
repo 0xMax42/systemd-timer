@@ -6,6 +6,9 @@ All notable changes to this project will be documented in this file.
 
 ### 🚀 Features
 
+- *(workflows)* Add release asset upload workflow - ([1012ca5](https://git.0xmax42.io/maxp/systemd-timer/commit/1012ca53781c36131a8b7aa43a9134f7b8565599))
+- *(cli)* Use dynamic version retrieval - ([403e047](https://git.0xmax42.io/maxp/systemd-timer/commit/403e047c0c376229244a5605d5c52eb1699acd4a))
+- *(utils)* Add version retrieval utility - ([56fb554](https://git.0xmax42.io/maxp/systemd-timer/commit/56fb554f132a53d74b2e9a1a02cc973c5420e73c))
 - *(generator)* Add systemctl usage instructions - ([f81bb53](https://git.0xmax42.io/maxp/systemd-timer/commit/f81bb533536810fc34656d572369b94ab669a181))
 - *(cli)* Add command to generate systemd unit files - ([97dc3fe](https://git.0xmax42.io/maxp/systemd-timer/commit/97dc3fe23acf2c35053aced7b34918bab7778c35))
 - *(utils)* Export utility functions for filesystem and naming - ([428e849](https://git.0xmax42.io/maxp/systemd-timer/commit/428e84927f8a9a379fa014ea763dd61115be34d6))
@@ -29,6 +32,7 @@ All notable changes to this project will be documented in this file.
 
 ### ⚙️ Miscellaneous Tasks
 
+- *(tasks)* Include version file in build process - ([6e00e89](https://git.0xmax42.io/maxp/systemd-timer/commit/6e00e89bb086672b9c3276ffeebcb1ded28c836f))
 - Add VSCode settings for color customizations and folder listener - ([6608f48](https://git.0xmax42.io/maxp/systemd-timer/commit/6608f488405adefc7993f47a137a824e5de62154))
 - *(config)* Add deno configuration and lockfile - ([0b72050](https://git.0xmax42.io/maxp/systemd-timer/commit/0b720500e0fe34db087b3277c38fa6bb07875e80))
 - Add automated release workflow and scripts for version management - ([a058e7b](https://git.0xmax42.io/maxp/systemd-timer/commit/a058e7b6838d41a98f3269db9a9d1e31f752121f))
