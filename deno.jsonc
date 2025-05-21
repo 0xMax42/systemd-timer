@@ -2,7 +2,7 @@
     "tasks": {
         "start": "deno run -A src/mod.ts",
         "test": "deno test -A --coverage **/__tests__/*.test.ts",
-        "build": "deno compile --allow-env --allow-write --output dist/systemd-timer src/mod.ts"
+        "build": "deno compile --include=VERSION --allow-env --allow-write --output dist/systemd-timer src/mod.ts"
     },
     "compilerOptions": {},
     "fmt": {
