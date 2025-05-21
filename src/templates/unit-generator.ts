@@ -20,6 +20,16 @@ export async function generateUnitFiles(options: TimerOptions): Promise<void> {
         );
         console.log(`Service unit written to: ${servicePath}`);
         console.log(`Timer unit written to: ${timerPath}`);
+
+        console.log(`\nℹ️  Hinweis:`);
+
+        if (options.user) {
+            console.log(`  systemctl --user daemon-reload`);
+            console.log(`  systemctl --user enable --now ${name}.timer`);
+        } else {
+            console.log(`  sudo systemctl daemon-reload`);
+            console.log(`  sudo systemctl enable --now ${name}.timer`);
+        }
     }
 }
 
