@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### 🚀 Features
 
+- *(generator)* Add systemctl usage instructions - ([f81bb53](https://git.0xmax42.io/maxp/systemd-timer/commit/f81bb533536810fc34656d572369b94ab669a181))
 - *(cli)* Add command to generate systemd unit files - ([97dc3fe](https://git.0xmax42.io/maxp/systemd-timer/commit/97dc3fe23acf2c35053aced7b34918bab7778c35))
 - *(utils)* Export utility functions for filesystem and naming - ([428e849](https://git.0xmax42.io/maxp/systemd-timer/commit/428e84927f8a9a379fa014ea763dd61115be34d6))
 - *(types)* Add TimerOptions interface for timer configuration - ([ba4b933](https://git.0xmax42.io/maxp/systemd-timer/commit/ba4b933f78c48a52b1c199fe28dc82d7ebabd7fe))
@@ -15,6 +16,11 @@ All notable changes to this project will be documented in this file.
 ### 🚜 Refactor
 
 - *(utils)* Update import path for TimerOptions - ([316f3af](https://git.0xmax42.io/maxp/systemd-timer/commit/316f3af04ef7fe4c08963cfe3ad7780ed3bc262c))
+
+### 📚 Documentation
+
+- Add README for systemd-timer CLI tool - ([db1f56c](https://git.0xmax42.io/maxp/systemd-timer/commit/db1f56c539309b8a02adff114d765c725ac5ff8a))
+- Add MIT license file - ([e1cd5df](https://git.0xmax42.io/maxp/systemd-timer/commit/e1cd5dfd353c7cd7ca770daae5fc40405e461d1d))
 
 ### 🧪 Testing
 
