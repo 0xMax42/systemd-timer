@@ -1,5 +1,7 @@
 # systemd-timer
 
+![Project time](https://waka.0xmax42.io/api/badge/0XMax42/interval:today/project:systemd-timer?label=Project%20time)
+
 Ein einfaches CLI-Tool zum schnellen Erzeugen von systemd `.service` und `.timer` Units – als Ersatz oder moderne Ergänzung zu klassischen `cron`-Jobs.
 
 ---
