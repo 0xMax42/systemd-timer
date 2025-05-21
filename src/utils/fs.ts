@@ -1,6 +1,6 @@
 import { ensureDir } from 'https://deno.land/std@0.224.0/fs/mod.ts';
 import { join } from 'https://deno.land/std@0.224.0/path/mod.ts';
-import { TimerOptions } from '../types/options.ts';
+import { TimerOptions } from '../types/mod.ts';
 
 export async function writeUnitFiles(
     name: string,
