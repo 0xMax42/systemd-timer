@@ -12,14 +12,20 @@ export async function generateUnitFiles(options: TimerOptions): Promise<void> {
         console.log(`\n===== ${name}.timer =====`);
         console.log(timerUnit);
     } else {
-        const { servicePath, timerPath } = await writeUnitFiles(
+        const result = await writeUnitFiles(
             name,
             serviceUnit,
             timerUnit,
             options,
         );
-        console.log(`Service unit written to: ${servicePath}`);
-        console.log(`Timer unit written to: ${timerPath}`);
+
+        if (result) {
+            const { servicePath, timerPath } = result;
+            console.log(`Service Unit geschrieben in: ${servicePath}`);
+            console.log(`Timer Unit geschrieben in: ${timerPath}`);
+        } else {
+            return;
+        }
 
         console.log(`\nℹ️  Hinweis:`);
 

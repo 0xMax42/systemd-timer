@@ -24,7 +24,7 @@ Deno.test('writeUnitFiles schreibt .service und .timer korrekt', async () => {
         serviceContent,
         timerContent,
         options as TimerOptions,
-    );
+    ) as { servicePath: string; timerPath: string };
 
     // Überprüfe Pfade
     assertEquals(servicePath, join(tmp, 'test-backup.service'));
