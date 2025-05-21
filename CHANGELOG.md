@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [unreleased]
 
+### 🐛 Bug Fixes
+
+- *(utils)* Handle file write failures with rollback - ([bd71b8e](https://git.0xmax42.io/maxp/systemd-timer/commit/bd71b8ee14a1856f1adaaaea198c8467b1a00d24))
+
 ### 📚 Documentation
 
 - *(readme)* Add project time badge - ([a288dbc](https://git.0xmax42.io/maxp/systemd-timer/commit/a288dbc140fefbc46745f70cdcd71148802fdabf))
