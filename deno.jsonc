@@ -1,0 +1,24 @@
+{
+    "tasks": {
+        "start": "deno run -A src/mod.ts",
+        "test": "deno test -A --coverage **/__tests__/*.test.ts",
+        "build": "deno compile --allow-env --allow-write --output dist/systemd-timer src/mod.ts"
+    },
+    "compilerOptions": {},
+    "fmt": {
+        "useTabs": false,
+        "lineWidth": 80,
+        "indentWidth": 4,
+        "semiColons": true,
+        "singleQuote": true,
+        "proseWrap": "preserve",
+        "include": [
+            "src/",
+            "mod.ts"
+        ]
+    },
+    "exclude": [],
+    "imports": {
+        "@cliffy/command": "jsr:@cliffy/command@1.0.0-rc.7"
+    }
+}
