@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [unreleased]
+
+### 📚 Documentation
+
+- *(readme)* Add project time badge - ([a288dbc](https://git.0xmax42.io/maxp/systemd-timer/commit/a288dbc140fefbc46745f70cdcd71148802fdabf))
+
 ## [0.1.0] - 2025-05-21
 
 ### 🚀 Features
