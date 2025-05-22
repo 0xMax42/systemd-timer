@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
-## [unreleased]
+## [0.2.0](https://git.0xmax42.io/maxp/systemd-timer/compare/v0.1.0..v0.2.0) - 2025-05-22
+
+### 🚀 Features
+
+- *(scripts)* Add installation script for systemd-timer binary - ([264b43c](https://git.0xmax42.io/maxp/systemd-timer/commit/264b43c9a667d344e27cca4ac2f17d7a4a25bffc))
+- *(workflows)* Add matrix build and SHA256 generation for releases - ([118e4e5](https://git.0xmax42.io/maxp/systemd-timer/commit/118e4e5a867a42c0d79efcc3b2a4db188affedec))
+- *(tasks)* Add build tasks for amd64 and arm64 targets - ([01898a3](https://git.0xmax42.io/maxp/systemd-timer/commit/01898a3a8e094dfbbf981ab6f1cf38d52f60ef5d))
 
 ### 🐛 Bug Fixes
 
