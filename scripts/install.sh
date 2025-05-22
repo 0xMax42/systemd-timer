@@ -38,9 +38,18 @@ TMP_FILE=$(mktemp)
 curl -fsSL "${DOWNLOAD_URL}" -o "${TMP_FILE}"
 chmod +x "${TMP_FILE}"
 
-# === Optional: SHA256-Check ===
-curl -fsSL "${DOWNLOAD_URL}.sha256" -o "${TMP_FILE}.sha256"
-echo "$(cat ${TMP_FILE}.sha256)  ${TMP_FILE}" | sha256sum -c -
+# === SHA256-Check ===
+TMP_HASH=$(mktemp)
+curl -fsSL "${DOWNLOAD_URL}.sha256" -o "$TMP_HASH"
+EXPECTED_HASH=$(cut -d ' ' -f1 "$TMP_HASH")
+ACTUAL_HASH=$(openssl dgst -sha256 "$TMP_FILE" | awk '{print $2}')
+
+if [ "$EXPECTED_HASH" != "$ACTUAL_HASH" ]; then
+  echo "⚠️ Checksum mismatch!"
+  echo "Expected: $EXPECTED_HASH"
+  echo "Actual:   $ACTUAL_HASH"
+  exit 1
+fi
 
 # === Installation ===
 echo "🚀 Installing to ${INSTALL_PATH}/${BINARY_NAME}"
