@@ -24,14 +24,26 @@ Ein einfaches CLI-Tool zum schnellen Erzeugen von systemd `.service` und `.timer
 
 ## 🛠️ Installation
 
-```bash
-git clone https://git.0xmax42.io/maxp/systemd-timer.git
-cd systemd-timer
-deno task build
 
-# Binary liegt nun unter ./systemd-timer
-./systemd-timer --help
+Du kannst `systemd-timer` direkt per Shell-Skript installieren:
+
+```bash
+curl -fsSL https://git.0xmax42.io/maxp/systemd-timer/raw/branch/main/scripts/install.sh | sh
 ```
+
+Das Skript erkennt automatisch deine Plattform (Linux `amd64` oder `arm64`) und installiert die passende Binary nach `/usr/local/bin`, sofern dies erlaubt ist (ggf. mit `sudo`).
+
+**Hinweis:**
+- Für die Installation ist eine funktionierende Internetverbindung notwendig.
+- Die Integrität der Binary wird mittels SHA256-Prüfsumme verifiziert.
+- Du kannst das Skript vor der Ausführung auch manuell inspizieren:
+
+```bash
+curl -fsSL https://git.0xmax42.io/maxp/systemd-timer/raw/branch/main/scripts/install.sh -o install.sh
+less install.sh
+```
+
+Weitere Optionen und manuelle Installationswege findest du unter [`scripts/install.sh`](scripts/install.sh).
 
 ---
 
