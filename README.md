@@ -1,53 +1,55 @@
 # systemd-timer
 
-![Project time](https://waka.0xmax42.io/api/badge/0XMax42/interval:today/project:systemd-timer?label=Project%20time)
+- ![Project time](https://waka.0xmax42.io/api/badge/0XMax42/interval\:today/project\:systemd-timer?label=Project%20time)
+- [Deutsche Version dieser Readme](README.DE.md)
 
-Ein einfaches CLI-Tool zum schnellen Erzeugen von systemd `.service` und `.timer` Units – als Ersatz oder moderne Ergänzung zu klassischen `cron`-Jobs.
+A simple CLI tool for quickly generating systemd `.service` and `.timer` units — as a replacement or modern supplement to classic `cron` jobs.
 
 ---
 
 ## 🚀 Features
 
-- Erzeugt `.service` und `.timer` Dateien per CLI
-- Unterstützt `--user` Timer (für `~/.config/systemd/user/`)
-- Optionales Logging (`StandardOutput/StandardError`)
-- Unterstützt:
-  - `--calendar`
-  - `--exec`
-  - `--after`
-  - `--environment`
-  - `--output`
-  - `--dry-run`
-- Getestet und typisiert mit Deno + Cliffy
+* Generates `.service` and `.timer` files via CLI
+* Supports `--user` timers (for `~/.config/systemd/user/`)
+* Optional logging (`StandardOutput/StandardError`)
+* Supports:
+
+  * `--calendar`
+  * `--exec`
+  * `--after`
+  * `--environment`
+  * `--output`
+  * `--dry-run`
+* Tested and typed with Deno + Cliffy
 
 ---
 
 ## 🛠️ Installation
 
-
-Du kannst `systemd-timer` direkt per Shell-Skript installieren:
+You can install `systemd-timer` directly via shell script:
 
 ```bash
 curl -fsSL https://git.0xmax42.io/maxp/systemd-timer/raw/branch/main/scripts/install.sh | sh
 ```
 
-Das Skript erkennt automatisch deine Plattform (Linux `amd64` oder `arm64`) und installiert die passende Binary nach `/usr/local/bin`, sofern dies erlaubt ist (ggf. mit `sudo`).
+The script automatically detects your platform (Linux `amd64` or `arm64`) and installs the appropriate binary to `/usr/local/bin`, if permitted (possibly using `sudo`).
 
-**Hinweis:**
-- Für die Installation ist eine funktionierende Internetverbindung notwendig.
-- Die Integrität der Binary wird mittels SHA256-Prüfsumme verifiziert.
-- Du kannst das Skript vor der Ausführung auch manuell inspizieren:
+**Note:**
+
+* A working internet connection is required for installation.
+* The integrity of the binary is verified using a SHA256 checksum.
+* You can manually inspect the script before execution:
 
 ```bash
 curl -fsSL https://git.0xmax42.io/maxp/systemd-timer/raw/branch/main/scripts/install.sh -o install.sh
 less install.sh
 ```
 
-Weitere Optionen und manuelle Installationswege findest du unter [`scripts/install.sh`](scripts/install.sh).
+Additional options and manual installation methods are available under [`scripts/install.sh`](scripts/install.sh).
 
 ---
 
-## 📦 Beispiel
+## 📦 Example
 
 ```bash
 ./systemd-timer create \
@@ -58,11 +60,12 @@ Weitere Optionen und manuelle Installationswege findest du unter [`scripts/insta
   --logfile "/var/log/backup.log"
 ```
 
-Erzeugt:
-- `~/.config/systemd/user/backup.service`
-- `~/.config/systemd/user/backup.timer`
+This creates:
 
-Anschließend aktivieren:
+* `~/.config/systemd/user/backup.service`
+* `~/.config/systemd/user/backup.timer`
+
+Activate afterwards:
 
 ```bash
 systemctl --user daemon-reload
@@ -71,7 +74,7 @@ systemctl --user enable --now backup.timer
 
 ---
 
-## 🧪 Tests ausführen
+## 🧪 Running Tests
 
 ```bash
 deno task test
@@ -79,7 +82,7 @@ deno task test
 
 ---
 
-## 🧰 Entwickeln
+## 🧰 Development
 
 ```bash
 deno task start create --exec "/bin/true" --calendar "daily" --dry-run
@@ -87,17 +90,17 @@ deno task start create --exec "/bin/true" --calendar "daily" --dry-run
 
 ---
 
-## 🔒 Rechte / Flags
+## 🔒 Permissions / Flags
 
-Das Tool benötigt beim Ausführen bzw. Kompilieren:
+The tool requires the following permissions when running or compiling:
 
-- `--allow-env` (für `$HOME`)
-- `--allow-write` (zum Schreiben von `.service`/`.timer`)
+* `--allow-env` (for `$HOME`)
+* `--allow-write` (to write `.service`/`.timer` files)
 
-Beim Entwickeln wird meist `-A` (allow all) verwendet.
+During development, usually `-A` (allow all) is used.
 
 ---
 
-## 📝 Lizenz
+## 📝 License
 
 [MIT License](LICENSE)
