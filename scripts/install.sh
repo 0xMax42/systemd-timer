@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
-set -euo pipefail
+
+# Fail-safe bash mode (only if bash is used)
+if [ -n "$BASH_VERSION" ]; then
+  set -euo pipefail
+else
+  set -eu
+fi
 
 # === Konfiguration ===
 REPO_URL="https://git.0xmax42.io/maxp/systemd-timer/releases/download/latest"
