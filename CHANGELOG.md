@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### 🐛 Bug Fixes
 
+- *(install)* Enhance checksum validation with detailed comparison - ([0ca8ed9](https://git.0xmax42.io/maxp/systemd-timer/commit/0ca8ed94ccc4b9fe4ccac331957f01f852999094))
 - *(install)* Ensure compatibility with non-bash shells - ([20d1430](https://git.0xmax42.io/maxp/systemd-timer/commit/20d143035ec6893f680b68dc4a2f6319ca7a5b81))
 
 ## [0.2.0](https://git.0xmax42.io/maxp/systemd-timer/compare/v0.1.0..v0.2.0) - 2025-05-22
