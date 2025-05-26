@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [unreleased]
+## [0.2.3](https://git.0xmax42.io/maxp/systemd-timer/compare/v0.2.2..v0.2.3) - 2025-05-26
 
 ### 🚀 Features
 
