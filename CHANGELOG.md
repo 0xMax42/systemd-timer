@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [unreleased]
 
+### 🚀 Features
+
+- *(workflows)* Add GitHub release synchronization workflow - ([27c7367](https://git.0xmax42.io/maxp/systemd-timer/commit/27c7367ef1799428cc5a491b25036f77b65758af))
+
 ### 📚 Documentation
 
 - *(readme)* Update project time badge interval - ([e3a3e61](https://git.0xmax42.io/maxp/systemd-timer/commit/e3a3e61bce0e62c2397bbc5bde3eff81b915c94a))
