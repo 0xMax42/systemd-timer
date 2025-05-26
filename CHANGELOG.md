@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [unreleased]
+
+### ⚙️ Miscellaneous Tasks
+
+- *(workflows)* Consolidate release sync into upload workflow - ([0c1d8be](https://git.0xmax42.io/maxp/systemd-timer/commit/0c1d8be79f0cc331db9029beb46384659f465f6e))
+
 ## [0.2.3](https://git.0xmax42.io/maxp/systemd-timer/compare/v0.2.2..v0.2.3) - 2025-05-26
 
 ### 🚀 Features
