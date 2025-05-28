@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: v2.x
+
+      - name: Format
+        id: format
+        continue-on-error: true
+        run: deno task fmt
+
+      - name: Lint
+        id: lint
+        continue-on-error: true
+        run: deno task lint
+
+      - name: Test
+        id: test
+        continue-on-error: true
+        run: deno task test
+
+      - name: Fail if any step failed
+        if: |
+          steps.format.outcome != 'success' ||
+          steps.lint.outcome != 'success' ||
+          steps.test.outcome != 'success'
+        run: |
+          echo "::error::One or more steps failed"
+          exit 1
