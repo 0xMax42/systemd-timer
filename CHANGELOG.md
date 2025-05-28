@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [unreleased]
+
+### 🐛 Bug Fixes
+
+- *(tasks)* Add read permissions to build scripts - ([a22c156](https://git.0xmax42.io/maxp/systemd-timer/commit/a22c156dd3d2cf4a24f0eed699f7dfabfae3837a))
+
 ## [0.4.0](https://git.0xmax42.io/maxp/systemd-timer/compare/v0.3.1..v0.4.0) - 2025-05-28
 
 ### 🚀 Features
