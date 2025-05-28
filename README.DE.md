@@ -12,13 +12,17 @@ Ein einfaches CLI-Tool zum schnellen Erzeugen von systemd `.service` und `.timer
 - Unterstützt `--user` Timer (für `~/.config/systemd/user/`)
 - Optionales Logging (`StandardOutput/StandardError`)
 - Unterstützt:
-  - `--calendar`
-  - `--exec`
-  - `--after`
-  - `--environment`
-  - `--output`
-  - `--dry-run`
-- Getestet und typisiert mit Deno + Cliffy
+  - `--calendar`: Zeitplan für den Timer (systemd `OnCalendar`)
+  - `--exec`: Auszuführendes Kommando (`ExecStart`)
+  - `--description`: Beschreibung für die Unit
+  - `--after`: `After=`-Abhängigkeiten in der Service-Unit
+  - `--environment`: Beliebige `Environment=KEY=VALUE` Einträge
+  - `--output`: Zielverzeichnis für die generierten Unit-Dateien
+  - `--run-as`: Setzt `User=` in der Service-Unit (nur systemweite Timer)
+  - `--home`: Setzt `Environment=HOME=…`
+  - `--cwd`: Arbeitsverzeichnis des Prozesses (`WorkingDirectory`)
+  - `--dry-run`: Gibt nur die generierten Inhalte aus, ohne sie zu schreiben
+- Getestet und typisiert mit **Deno** + **Cliffy**
 
 ---
 
