@@ -6,6 +6,9 @@ All notable changes to this project will be documented in this file.
 
 ### 🚀 Features
 
+- *(vscode)* Enable Deno support and configure JSON formatting - ([c02da70](https://git.0xmax42.io/maxp/systemd-timer/commit/c02da709028e1fbb175d5091fbd9d3ed2940cdcd))
+- *(ci)* Add CI workflow with format, lint, and test steps - ([9ad407e](https://git.0xmax42.io/maxp/systemd-timer/commit/9ad407e531270445d9657402fa3e826a7dabd880))
+- *(tasks)* Add formatting, linting, and CI tasks - ([07730e5](https://git.0xmax42.io/maxp/systemd-timer/commit/07730e576180be3f6a16b0fda6c6554a86844eee))
 - *(tasks)* Include localization files in build commands - ([440130f](https://git.0xmax42.io/maxp/systemd-timer/commit/440130f782b1fc51053164410ead29397b867892))
 - *(i18n)* Add German and English translations for CLI tool - ([bd5ea80](https://git.0xmax42.io/maxp/systemd-timer/commit/bd5ea80aff5092118920ea897af6c3f5f9fb2a3b))
 - *(i18n)* Add i18n module for localization support - ([c9b4c8b](https://git.0xmax42.io/maxp/systemd-timer/commit/c9b4c8bd71029976fe900b40a2297b52200a216b))
@@ -13,6 +16,10 @@ All notable changes to this project will be documented in this file.
 ### 🚜 Refactor
 
 - *(cli)* Integrate i18n support across commands - ([2a13ee2](https://git.0xmax42.io/maxp/systemd-timer/commit/2a13ee2539d96d161a9ee398629fa79822d856f2))
+
+### 🎨 Styling
+
+- *(i18n)* Add missing newline at EOF in JSON files - ([54d71ba](https://git.0xmax42.io/maxp/systemd-timer/commit/54d71ba3f00ced25313036d9f10f6fb01feba52a))
 
 ### 🧪 Testing
 
