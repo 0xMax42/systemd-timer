@@ -1,5 +1,8 @@
-import './cli/main.ts';
+import { createCli } from './cli/mod.ts';
+import { initI18n } from './i18n/mod.ts';
 
 // ────────────────────────────────────────────────
 // Entry Point for CLI
-// Delegates to src/cli/main.ts, which registers all CLI commands
+
+await initI18n();
+await (await createCli()).parse(Deno.args);

@@ -1,3 +1,4 @@
+import { t } from '../i18n/mod.ts';
 import { TimerOptions } from '../types/mod.ts';
 import { deriveNameFromExec, writeUnitFiles } from '../utils/mod.ts';
 
@@ -21,13 +22,13 @@ export async function generateUnitFiles(options: TimerOptions): Promise<void> {
 
         if (result) {
             const { servicePath, timerPath } = result;
-            console.log(`Service Unit geschrieben in: ${servicePath}`);
-            console.log(`Timer Unit geschrieben in: ${timerPath}`);
+            console.log(t('unit_written_service', { path: servicePath }));
+            console.log(t('unit_written_timer', { path: timerPath }));
         } else {
             return;
         }
 
-        console.log(`\nℹ️  Hinweis:`);
+        console.log(t('hint_header'));
 
         if (options.user) {
             console.log(`  systemctl --user daemon-reload`);

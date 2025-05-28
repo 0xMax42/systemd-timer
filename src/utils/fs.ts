@@ -1,6 +1,7 @@
 import { ensureDir, exists } from 'https://deno.land/std@0.224.0/fs/mod.ts';
 import { join } from 'https://deno.land/std@0.224.0/path/mod.ts';
 import { TimerOptions } from '../types/mod.ts';
+import { t } from '../i18n/mod.ts';
 
 export async function writeUnitFiles(
     name: string,
@@ -28,9 +29,9 @@ export async function writeUnitFiles(
                 await Deno.remove(timerPath);
             }
         } catch (rollbackError) {
-            console.error('Rollback fehlgeschlagen:', rollbackError);
+            console.error(t('rollback_failed'), rollbackError);
         }
-        console.error('Fehler beim Schreiben der Units:', error);
+        console.error(t('error_write_units'), error);
         return undefined;
     }
 
