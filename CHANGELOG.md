@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 
 ## [unreleased]
 
+### 🚀 Features
+
+- *(cli)* Add options for user, home, and working directory - ([113103f](https://git.0xmax42.io/maxp/systemd-timer/commit/113103f368ead3014165cc708f016a04749f59be))
+
+### 📚 Documentation
+
+- *(readme)* Expand CLI option descriptions for clarity - ([fb2a62d](https://git.0xmax42.io/maxp/systemd-timer/commit/fb2a62d984615caa4035fd5c1e8e64d245499e47))
+
+### 🎨 Styling
+
+- *(workflows)* Fix formatting and whitespace issues - ([c4855ed](https://git.0xmax42.io/maxp/systemd-timer/commit/c4855ed3fbc0ada208690f90932710983daef392))
+
 ### ⚙️ Miscellaneous Tasks
 
 - *(workflows)* Consolidate release sync into upload workflow - ([0c1d8be](https://git.0xmax42.io/maxp/systemd-timer/commit/0c1d8be79f0cc331db9029beb46384659f465f6e))
