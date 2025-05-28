@@ -12,5 +12,10 @@
         "/src/utils",
         "/src/types",
         "/src/i18n"
-    ]
+    ],
+    "deno.enable": true,
+    "[json]": {
+        "editor.defaultFormatter": "denoland.vscode-deno"
+    },
+    "editor.formatOnSave": true
 }
