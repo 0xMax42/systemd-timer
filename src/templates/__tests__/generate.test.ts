@@ -1,4 +1,5 @@
 import {
+    assert,
     assertStringIncludes,
 } from 'https://deno.land/std@0.224.0/assert/mod.ts';
 import { TimerOptions } from '../../types/mod.ts';
@@ -52,4 +53,64 @@ Deno.test('generateUnits berücksichtigt environment und logfile', () => {
     assertStringIncludes(serviceUnit, 'Environment=DEBUG=1');
     assertStringIncludes(serviceUnit, 'StandardOutput=append:/var/log/job.log');
     assertStringIncludes(serviceUnit, 'StandardError=append:/var/log/job.log');
+});
+
+Deno.test('generateUnits berücksichtigt runAs', () => {
+    const opts: TimerOptions = {
+        exec: '/bin/true',
+        calendar: 'daily',
+        runAs: 'myuser',
+    };
+    const { serviceUnit } = generateUnits('job', opts);
+
+    assertStringIncludes(serviceUnit, 'User=myuser');
+});
+
+Deno.test('generateUnits berücksichtigt home', () => {
+    const opts: TimerOptions = {
+        exec: '/bin/true',
+        calendar: 'daily',
+        home: '/home/myuser',
+    };
+    const { serviceUnit } = generateUnits('job', opts);
+
+    assertStringIncludes(serviceUnit, 'Environment=HOME=/home/myuser');
+});
+
+Deno.test('generateUnits berücksichtigt cwd', () => {
+    const opts: TimerOptions = {
+        exec: '/bin/true',
+        calendar: 'daily',
+        cwd: '/srv/app',
+    };
+    const { serviceUnit } = generateUnits('job', opts);
+
+    assertStringIncludes(serviceUnit, 'WorkingDirectory=/srv/app');
+});
+
+Deno.test('generateUnits verwendet default.target bei User-Timern', () => {
+    const opts: TimerOptions = {
+        exec: '/bin/true',
+        calendar: 'daily',
+        user: true,
+    };
+    const { timerUnit } = generateUnits('job', opts);
+
+    assertStringIncludes(timerUnit, 'WantedBy=default.target');
+});
+
+Deno.test('generateUnits ignoriert runAs bei --user', () => {
+    const opts = {
+        exec: '/bin/true',
+        calendar: 'daily',
+        user: true,
+        runAs: 'should-not-appear',
+    };
+
+    const { serviceUnit } = generateUnits('job', opts);
+
+    assert(
+        !serviceUnit.includes('User=should-not-appear'),
+        'User= sollte bei --user nicht enthalten sein',
+    );
 });

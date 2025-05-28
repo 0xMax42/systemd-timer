@@ -51,13 +51,17 @@ export function generateUnits(name: string, options: TimerOptions): {
         `[Service]`,
         `Type=oneshot`,
         `ExecStart=${options.exec}`,
+        ...(options.cwd ? [`WorkingDirectory=${options.cwd}`] : []),
         ...(options.environment?.map((e) => `Environment=${e}`) ?? []),
+        ...(options.home ? [`Environment=HOME=${options.home}`] : []),
+        ...(options.logfile
+            ? [
+                `StandardOutput=append:${options.logfile}`,
+                `StandardError=append:${options.logfile}`,
+            ]
+            : []),
+        ...(options.runAs && !options.user ? [`User=${options.runAs}`] : []),
     ];
-
-    if (options.logfile) {
-        unitParts.push(`StandardOutput=append:${options.logfile}`);
-        unitParts.push(`StandardError=append:${options.logfile}`);
-    }
 
     const serviceUnit = unitParts.join('\n');
 
@@ -70,7 +74,7 @@ export function generateUnits(name: string, options: TimerOptions): {
         `Persistent=true`,
         ``,
         `[Install]`,
-        `WantedBy=timers.target`,
+        `WantedBy=${options.user ? 'default.target' : 'timers.target'}`,
     ];
 
     const timerUnit = timerParts.join('\n');

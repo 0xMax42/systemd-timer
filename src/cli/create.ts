@@ -18,6 +18,18 @@ export const createCommand = new Command()
     })
     .option('--description <desc:string>', 'Beschreibung des Timers')
     .option('--user', 'Erstellt die Unit als User-Timer')
+    .option(
+        '--run-as <user:string>',
+        'Führe den systemweiten Timer als bestimmter Benutzer aus (setzt User= in der Service-Unit)',
+    )
+    .option(
+        '--home <path:string>',
+        'HOME-Variable für den Service setzen',
+    )
+    .option(
+        '--cwd <path:string>',
+        'Arbeitsverzeichnis (WorkingDirectory) für den Service-Prozess',
+    )
     .option('--output <dir:string>', 'Zielverzeichnis der Unit-Dateien')
     .option(
         '--after <target:string>',
