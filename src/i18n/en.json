@@ -1,0 +1,22 @@
+{
+    "cli_description": "CLI tool for generating systemd .timer and .service units",
+    "cli_create_description": "Generates a systemd .service and .timer unit",
+    "option_name": "Name of the unit files (optional, otherwise derived from the exec command)",
+    "option_exec": "Command to be executed by systemd",
+    "option_calendar": "OnCalendar expression for the timer",
+    "option_description": "Description of the timer",
+    "option_user": "Creates the unit as a user timer",
+    "option_run_as": "Runs the system-wide timer as a specific user (sets User= in the service unit)",
+    "option_home": "Sets the HOME variable for the service",
+    "option_cwd": "Working directory (WorkingDirectory) for the service process",
+    "option_output": "Target directory for the unit files",
+    "option_after": "Optional After= directive for the service unit",
+    "option_environment": "Environment variables in the format KEY=VALUE",
+    "option_logfile": "File path for log output (stdout/stderr)",
+    "option_dry_run": "Only outputs the unit files without writing them",
+    "unit_written_service": "Service unit written to: {path}",
+    "unit_written_timer": "Timer unit written to: {path}",
+    "hint_header": "\nℹ️  Note:",
+    "error_write_units": "Error while writing unit files:",
+    "rollback_failed": "Rollback failed:"
+}
