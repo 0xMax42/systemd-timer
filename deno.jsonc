@@ -5,8 +5,8 @@
         "fmt": "deno fmt --check",
         "lint": "deno lint",
         "ci": "deno task fmt && deno task lint && deno task test", // For local CI checks
-        "build:amd64": "deno compile --target x86_64-unknown-linux-gnu --include VERSION --include src/i18n/de.json --include src/i18n/en.json --allow-env --allow-write --output dist/systemd-timer-linux-amd64 src/mod.ts",
-        "build:arm64": "deno compile --target aarch64-unknown-linux-gnu --include VERSION --include src/i18n/de.json --include src/i18n/en.json --allow-env --allow-write --output dist/systemd-timer-linux-arm64 src/mod.ts"
+        "build:amd64": "deno compile --target x86_64-unknown-linux-gnu --include VERSION --include src/i18n/de.json --include src/i18n/en.json --allow-env --allow-write --allow-read --output dist/systemd-timer-linux-amd64 src/mod.ts",
+        "build:arm64": "deno compile --target aarch64-unknown-linux-gnu --include VERSION --include src/i18n/de.json --include src/i18n/en.json --allow-env --allow-write --allow-read --output dist/systemd-timer-linux-arm64 src/mod.ts"
     },
     "compilerOptions": {},
     "fmt": {
