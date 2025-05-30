@@ -6,9 +6,14 @@ All notable changes to this project will be documented in this file.
 
 ### 🚀 Features
 
+- *(ci)* Add compile steps to CI workflow - ([531a02a](https://git.0xmax42.io/maxp/systemd-timer/commit/531a02a6e11a769f2e05888d49ea2b4808d974e3))
 - *(vscode)* Add JSONC formatter configuration - ([c7af1fb](https://git.0xmax42.io/maxp/systemd-timer/commit/c7af1fb6caa46c22b84229745067d05bf60b6f64))
 - *(i18n)* Support loading JSONC translation files - ([4ac5dd4](https://git.0xmax42.io/maxp/systemd-timer/commit/4ac5dd4c88324f99cb6827283ad85bb9718abbeb))
 - *(config)* Add @std/jsonc dependency - ([8f1cb3f](https://git.0xmax42.io/maxp/systemd-timer/commit/8f1cb3fad71ead365d93087963ddb6c7202a9b4f))
+
+### 🐛 Bug Fixes
+
+- *(build)* Update included files to use .jsonc format - ([f3f2c61](https://git.0xmax42.io/maxp/systemd-timer/commit/f3f2c61da0785dce4c6b8c7d8ef0ae9abf098172))
 
 ### 🎨 Styling
 
