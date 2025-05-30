@@ -24,6 +24,9 @@ A simple CLI tool for quickly generating systemd `.service` and `.timer` units â
   * `--cwd`: Working directory for the process (`WorkingDirectory`)
   * `--dry-run`: Outputs unit content without writing to disk
 * Tested and fully typed with **Deno** + **Cliffy**
+* Inputs are validated and checked for errors;
+  * e.g., `--calendar` must be a valid systemd `OnCalendar` expression
+* Multilingual (English, German)
 
 ---
 

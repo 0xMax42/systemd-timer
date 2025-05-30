@@ -23,6 +23,9 @@ Ein einfaches CLI-Tool zum schnellen Erzeugen von systemd `.service` und `.timer
   - `--cwd`: Arbeitsverzeichnis des Prozesses (`WorkingDirectory`)
   - `--dry-run`: Gibt nur die generierten Inhalte aus, ohne sie zu schreiben
 - Getestet und typisiert mit **Deno** + **Cliffy**
+- Eingaben werden validiert und auf Fehler geprüft;
+  - z.B. muss `--calendar` ein gültiger systemd `OnCalendar` Ausdruck sein
+- Mehrsprachig (Englisch, Deutsch)
 
 ---
 
