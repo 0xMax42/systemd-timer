@@ -1,6 +1,8 @@
 {
+    // General
     "cli_description": "CLI-Tool zum Erzeugen von systemd .timer und .service Units",
     "cli_create_description": "Erzeugt eine systemd .service und .timer Unit",
+    // Options
     "option_name": "Name der Unit-Dateien (optional, wird sonst aus dem Exec generiert)",
     "option_exec": "Kommando, das durch systemd ausgeführt werden soll",
     "option_calendar": "OnCalendar-Ausdruck für den Timer",
@@ -14,9 +16,11 @@
     "option_environment": "Environment-Variablen im Format KEY=VALUE",
     "option_logfile": "Dateipfad für Log-Ausgabe (stdout/stderr)",
     "option_dry_run": "Gibt die Unit-Dateien nur aus, ohne sie zu schreiben",
+    // Messages
     "unit_written_service": "Service Unit geschrieben in: {path}",
     "unit_written_timer": "Timer Unit geschrieben in: {path}",
     "hint_header": "\nℹ️  Hinweis:",
+    // Error messages
     "error_write_units": "Fehler beim Schreiben der Units:",
     "rollback_failed": "Rollback fehlgeschlagen:"
 }
