@@ -6,8 +6,8 @@ All notable changes to this project will be documented in this file.
 
 ### 🧪 Testing
 
-- *(fs)* Update test descriptions and comments to English - ([5f55c73](https://git.0xmax42.io/maxp/systemd-timer/commit/5f55c735f96c787bb90b88e1aebb05660e3a4a42))
-- *(fs)* Add rollback tests for writeUnitFiles errors - ([140b18b](https://git.0xmax42.io/maxp/systemd-timer/commit/140b18b7cdd51d0e263003c105c9c809e7a594f1))
+- *(fs)* Update test descriptions and comments to English - ([c4f4614](https://git.0xmax42.io/maxp/systemd-timer/commit/c4f4614a2daee68f9b33b9676106214c65a1a427))
+- *(fs)* Add rollback tests for writeUnitFiles errors - ([6039d23](https://git.0xmax42.io/maxp/systemd-timer/commit/6039d236eb7de449ce22b1d9ea718389a3e2261d))
 
 ## [0.4.1](https://git.0xmax42.io/maxp/systemd-timer/compare/v0.4.0..v0.4.1) - 2025-05-28
 
