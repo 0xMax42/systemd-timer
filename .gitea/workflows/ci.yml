@@ -36,11 +36,19 @@ jobs:
         continue-on-error: true
         run: deno task test
 
+      - name: Compile
+        id: compile
+        continue-on-error: true
+        run: |
+          deno task build:amd64
+          deno task build:arm64
+
       - name: Fail if any step failed
         if: |
           steps.format.outcome != 'success' ||
           steps.lint.outcome != 'success' ||
-          steps.test.outcome != 'success'
+          steps.test.outcome != 'success' ||
+          steps.compile.outcome != 'success'
         run: |
           echo "::error::One or more steps failed"
           exit 1
