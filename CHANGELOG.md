@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [unreleased]
+
+### 📚 Documentation
+
+- *(readme)* Add input validation and multilingual support - ([ce78cf3](https://git.0xmax42.io/maxp/systemd-timer/commit/ce78cf3a9a14028114e0fb6fcc0973d86c2b2227))
+
 ## [0.5.0](https://git.0xmax42.io/maxp/systemd-timer/compare/v0.4.1..v0.5.0) - 2025-05-30
 
 ### 🚀 Features
