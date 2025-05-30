@@ -22,5 +22,11 @@
     "hint_header": "\nℹ️  Hinweis:",
     // Error messages
     "error_write_units": "Fehler beim Schreiben der Units:",
-    "rollback_failed": "Rollback fehlgeschlagen:"
+    "rollback_failed": "Rollback fehlgeschlagen:",
+    "error_invalid_env": "Ungültiges Environment-Format. Verwende KEY=VALUE.",
+    "error_path_schold_not_be_empty": "Pfad darf nicht leer sein.",
+    "error_path_not_found": "Pfad nicht gefunden: {path}",
+    "error_value_should_not_be_empty": "Wert ({label}) sollte nicht leer sein.",
+    "error_invalid_identifier": "Ungültiger Bezeichner: '{value}' für {identifier}. Erlaubt sind nur alphanumerische Zeichen, Unterstriche und Bindestriche.",
+    "error_invalid_calendar": "Ungültiger OnCalendar-Ausdruck: {value}. Bitte überprüfe die Syntax."
 }

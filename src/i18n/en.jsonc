@@ -22,5 +22,11 @@
     "hint_header": "\nℹ️  Note:",
     // Error messages
     "error_write_units": "Error while writing unit files:",
-    "rollback_failed": "Rollback failed:"
+    "rollback_failed": "Rollback failed:",
+    "error_invalid_env": "Invalid environment format. Use KEY=VALUE.",
+    "error_path_schold_not_be_empty": "Path should not be empty.",
+    "error_path_not_found": "Path not found: {path}",
+    "error_value_should_not_be_empty": "Value ({label}) should not be empty.",
+    "error_invalid_identifier": "Invalid identifier: '{value}' for {identifier}. Only alphanumeric characters, underscores, and hyphens are allowed.",
+    "error_invalid_calendar": "Invalid OnCalendar expression: {value}. Please check the syntax."
 }
