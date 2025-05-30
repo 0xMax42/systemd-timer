@@ -1,3 +1,5 @@
+import { parse as parseJsonc } from '@std/jsonc';
+
 /**
  * Initializes the i18n module by loading
  * the appropriate locale file based on the system language.
@@ -15,28 +17,34 @@ let translations: Record<string, string> = {};
 /**
  * Loads the translation file for the specified locale.
  *
- * Expects a JSON file in the same directory named like `de.json` or `en.json`.
+ * Accepts both `.jsonc` (JSON with comments) and plain `.json`.
+ * When both exist, `.jsonc` takes precedence.
  * Falls back to English ('en') if the specified file does not exist.
  *
  * @param locale - The language code (e.g., 'de', 'en') to load
  * @returns Promise that resolves once the translations have been loaded
  */
 export async function loadLocale(locale: string): Promise<void> {
-    try {
-        const localeUrl = new URL(`./${locale}.json`, import.meta.url);
-        const file = await Deno.readTextFile(localeUrl);
-        translations = JSON.parse(file);
-    } catch (err) {
-        if (err instanceof Deno.errors.NotFound) {
-            console.warn(
-                `Locale '${locale}' not found – falling back to 'en'.`,
-            );
-            if (locale !== 'en') {
-                await loadLocale('en');
+    const extensions = ['jsonc', 'json'];
+    for (const ext of extensions) {
+        try {
+            const localeUrl = new URL(`./${locale}.${ext}`, import.meta.url);
+            const raw = await Deno.readTextFile(localeUrl);
+            // parseJsonc tolerates both pure JSON and JSONC, so we can use it for either.
+            translations = parseJsonc(raw) as Record<string, string>;
+            return;
+        } catch (err) {
+            if (err instanceof Deno.errors.NotFound) {
+                // Continue with next extension.
+                continue;
             }
-        } else {
-            console.error('Error loading translation file:', err);
+            console.error(`Error parsing locale '${locale}.${ext}':`, err);
+            break;
         }
+    }
+    if (locale !== 'en') {
+        console.warn(`Locale '${locale}' not found – falling back to 'en'.`);
+        await loadLocale('en');
     }
 }
 
