@@ -23,6 +23,7 @@
     },
     "exclude": [],
     "imports": {
-        "@cliffy/command": "jsr:@cliffy/command@1.0.0-rc.7"
+        "@cliffy/command": "jsr:@cliffy/command@1.0.0-rc.7",
+        "@std/jsonc": "jsr:@std/jsonc@^1.0.2"
     }
 }
