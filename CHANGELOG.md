@@ -6,9 +6,9 @@ All notable changes to this project will be documented in this file.
 
 ### 🚀 Features
 
-- *(cli)* Add validation for command options - ([63002a7](https://git.0xmax42.io/maxp/systemd-timer/commit/63002a7f21cf4f2d760ba4acc14730c5a8ef6a93))
-- *(validation)* Add CLI validation helpers for input checks - ([5510ab7](https://git.0xmax42.io/maxp/systemd-timer/commit/5510ab74d6dc4cf803ec69c6c9b08c3fc5c1ec2e))
-- *(build)* Add run permissions to compiled binaries - ([5d3afd3](https://git.0xmax42.io/maxp/systemd-timer/commit/5d3afd30bde569aadf64c86f96e23dd327cc1556))
+- *(cli)* Add validation for command options - ([1c07af4](https://git.0xmax42.io/maxp/systemd-timer/commit/1c07af402b35ba4c2abf89ff5816e791994db536))
+- *(validation)* Add CLI validation helpers for input checks - ([3d95706](https://git.0xmax42.io/maxp/systemd-timer/commit/3d95706d683cac8d279dfb718541a17c42fa5d71))
+- *(build)* Add run permissions to compiled binaries - ([ccb04e4](https://git.0xmax42.io/maxp/systemd-timer/commit/ccb04e49820ff8238d7e7ad853aab5db06d5dc8a))
 - *(ci)* Add compile steps to CI workflow - ([531a02a](https://git.0xmax42.io/maxp/systemd-timer/commit/531a02a6e11a769f2e05888d49ea2b4808d974e3))
 - *(vscode)* Add JSONC formatter configuration - ([c7af1fb](https://git.0xmax42.io/maxp/systemd-timer/commit/c7af1fb6caa46c22b84229745067d05bf60b6f64))
 - *(i18n)* Support loading JSONC translation files - ([4ac5dd4](https://git.0xmax42.io/maxp/systemd-timer/commit/4ac5dd4c88324f99cb6827283ad85bb9718abbeb))
@@ -29,7 +29,7 @@ All notable changes to this project will be documented in this file.
 
 ### ⚙️ Miscellaneous Tasks
 
-- *(lock)* Update dependencies to latest versions - ([8c5dc16](https://git.0xmax42.io/maxp/systemd-timer/commit/8c5dc166ef5cf6df21ccd3c959e798742c99e659))
+- *(lock)* Update dependencies to latest versions - ([28b23cf](https://git.0xmax42.io/maxp/systemd-timer/commit/28b23cf947ecc57eb7fde541b29c68b41e508e7d))
 
 ## [0.4.1](https://git.0xmax42.io/maxp/systemd-timer/compare/v0.4.0..v0.4.1) - 2025-05-28
 
