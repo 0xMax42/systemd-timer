@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file.
 
 - *(readme)* Add input validation and multilingual support - ([ce78cf3](https://git.0xmax42.io/maxp/systemd-timer/commit/ce78cf3a9a14028114e0fb6fcc0973d86c2b2227))
 
+### ⚙️ Miscellaneous Tasks
+
+- *(workflows)* Add locked flag to cargo install for git-cliff - ([6efc151](https://git.0xmax42.io/maxp/systemd-timer/commit/6efc1515ed4f4fb8802405529e4a6e04870ec02a))
+
 ## [0.5.0](https://git.0xmax42.io/maxp/systemd-timer/compare/v0.4.1..v0.5.0) - 2025-05-30
 
 ### 🚀 Features
