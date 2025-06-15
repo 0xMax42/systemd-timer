@@ -43,6 +43,22 @@ jobs:
       - name: Upload SHA256 for ${{ matrix.target }}-${{ matrix.arch }}
         run: .gitea/scripts/upload-asset.sh ./dist/systemd-timer-${{ matrix.target }}-${{ matrix.arch }}.sha256 systemd-timer-${{ matrix.target }}-${{ matrix.arch }}.sha256
 
+      - name: Create zstd compressed archive
+        run: |
+          FILE="./dist/systemd-timer-${{ matrix.target }}-${{ matrix.arch }}"
+          zstd -q -19 -T0 -f "$FILE" -o "$FILE.zst"
+
+      - name: Generate SHA256 for zstd compressed archive
+        run: |
+          FILE="./dist/systemd-timer-${{ matrix.target }}-${{ matrix.arch }}.zst"
+          sha256sum "$FILE" > "$FILE.sha256"
+
+      - name: Upload zstd compressed archive for ${{ matrix.target }}-${{ matrix.arch }}
+        run: .gitea/scripts/upload-asset.sh ./dist/systemd-timer-${{ matrix.target }}-${{ matrix.arch }}.zst systemd-timer-${{ matrix.target }}-${{ matrix.arch }}.zst
+
+      - name: Upload SHA256 for zstd compressed archive
+        run: .gitea/scripts/upload-asset.sh ./dist/systemd-timer-${{ matrix.target }}-${{ matrix.arch }}.zst.sha256 systemd-timer-${{ matrix.target }}-${{ matrix.arch }}.zst.sha256
+
       - name: Run Releases Sync Action
         uses: https://git.0xmax42.io/actions/releases-sync@main
         with:
