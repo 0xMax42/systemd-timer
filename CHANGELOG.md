@@ -4,12 +4,18 @@ All notable changes to this project will be documented in this file.
 
 ## [unreleased]
 
+### 🚀 Features
+
+- *(install)* Add support for compressed .zst archives - ([3a1ee0c](https://git.0xmax42.io/maxp/systemd-timer/commit/3a1ee0cfd6ddba8734cde09196803e9ccdd14c5f))
+- *(workflows)* Add zstd compression for build artifacts - ([d9183d2](https://git.0xmax42.io/maxp/systemd-timer/commit/d9183d2f04b03cbdaf9e11bf05f7ce66111123e5))
+
 ### 📚 Documentation
 
 - *(readme)* Add input validation and multilingual support - ([ce78cf3](https://git.0xmax42.io/maxp/systemd-timer/commit/ce78cf3a9a14028114e0fb6fcc0973d86c2b2227))
 
 ### ⚙️ Miscellaneous Tasks
 
+- *(workflows)* Simplify release workflow with auto-changelog - ([05f3b51](https://git.0xmax42.io/maxp/systemd-timer/commit/05f3b519f56d893a0135736d8b722302c7cdd3f6))
 - *(workflows)* Add locked flag to cargo install for git-cliff - ([6efc151](https://git.0xmax42.io/maxp/systemd-timer/commit/6efc1515ed4f4fb8802405529e4a6e04870ec02a))
 
 ## [0.5.0](https://git.0xmax42.io/maxp/systemd-timer/compare/v0.4.1..v0.5.0) - 2025-05-30
