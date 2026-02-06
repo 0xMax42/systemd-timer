@@ -1,7 +1,4 @@
-import {
-    assert,
-    assertStringIncludes,
-} from 'https://deno.land/std@0.224.0/assert/mod.ts';
+import { assert, assertStringIncludes } from '@std/assert';
 import { TimerOptions } from '../../types/mod.ts';
 import { generateUnits } from '../unit-generator.ts';
 

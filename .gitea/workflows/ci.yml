@@ -17,6 +17,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Set up systemd dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -yqq systemd
+
       - uses: denoland/setup-deno@v1
         with:
           deno-version: v2.x
