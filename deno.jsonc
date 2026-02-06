@@ -25,10 +25,10 @@
     "exclude": [],
     "imports": {
         "@cliffy/command": "jsr:@cliffy/command@1.0.0-rc.8",
-        "@std/assert": "jsr:@std/assert@^1.0.18",
-        "@std/fs": "jsr:@std/fs@^1.0.22",
-        "@std/jsonc": "jsr:@std/jsonc@^1.0.2",
-        "@std/path": "jsr:@std/path@^1.1.4",
-        "@std/testing": "jsr:@std/testing@^1.0.17"
+        "@std/assert": "jsr:@std/assert@1.0.18",
+        "@std/fs": "jsr:@std/fs@1.0.22",
+        "@std/jsonc": "jsr:@std/jsonc@1.0.2",
+        "@std/path": "jsr:@std/path@1.1.4",
+        "@std/testing": "jsr:@std/testing@1.0.17"
     }
 }
