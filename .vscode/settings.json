@@ -8,11 +8,6 @@
         "activityBarBadge.foreground": "#15202b"
     },
     "peacock.color": "#c75c5c",
-    "exportall.config.folderListener": [
-        "/src/utils",
-        "/src/types",
-        "/src/i18n"
-    ],
     "deno.enable": true,
     "[json]": {
         "editor.defaultFormatter": "denoland.vscode-deno"
