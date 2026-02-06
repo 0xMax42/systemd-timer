@@ -1,5 +1,5 @@
-import { ensureDir, exists } from 'https://deno.land/std@0.224.0/fs/mod.ts';
-import { join } from 'https://deno.land/std@0.224.0/path/mod.ts';
+import { ensureDir, exists } from '@std/fs';
+import { join } from '@std/path';
 import { TimerOptions } from '../types/mod.ts';
 import { t } from '../i18n/mod.ts';
 

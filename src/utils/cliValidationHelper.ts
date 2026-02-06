@@ -1,7 +1,7 @@
 import { ValidationError } from '@cliffy/command';
 import { t } from '../i18n/mod.ts';
-import { existsSync } from 'https://deno.land/std@0.224.0/fs/mod.ts';
-import { resolve } from 'https://deno.land/std@0.224.0/path/mod.ts';
+import { existsSync } from '@std/fs';
+import { resolve } from '@std/path';
 
 /**
  * Collects repeated occurrences of the `--environment` CLI option and validates
@@ -167,9 +167,7 @@ export function validateSystemdCalendar(value: string): string {
     const { success } = command.outputSync();
 
     if (!success) {
-        throw new ValidationError(
-            t('error_invalid_calendar', { value }),
-        );
+        throw new ValidationError(t('error_invalid_calendar', { value }));
     }
 
     return value;

@@ -1,4 +1,4 @@
-import { resolve } from 'https://deno.land/std@0.224.0/path/mod.ts';
+import { resolve } from '@std/path';
 import { ValidationError } from '@cliffy/command';
 import {
     collectAndValidateAfter,
@@ -9,10 +9,7 @@ import {
     validateSystemdCalendar,
 } from '../mod.ts';
 import { t } from '../../i18n/mod.ts';
-import {
-    assertEquals,
-    assertThrows,
-} from 'https://deno.land/std@0.224.0/assert/mod.ts';
+import { assertEquals, assertThrows } from '@std/assert';
 
 Deno.test(
     'collectAndValidateEnv: throws ValidationError for invalid env format',
@@ -106,13 +103,16 @@ Deno.test('collectAndValidateAfter: returns aggregated array', () => {
     assertEquals(second, ['network.target', 'postgres.service']);
 });
 
-Deno.test('collectAndValidateAfter: throws ValidationError for empty value', () => {
-    assertThrows(
-        () => collectAndValidateAfter(''),
-        ValidationError,
-        t('error_value_should_not_be_empty', { label: '--after' }),
-    );
-});
+Deno.test(
+    'collectAndValidateAfter: throws ValidationError for empty value',
+    () => {
+        assertThrows(
+            () => collectAndValidateAfter(''),
+            ValidationError,
+            t('error_value_should_not_be_empty', { label: '--after' }),
+        );
+    },
+);
 
 Deno.test('validateIdentifier: returns value for valid identifier', () => {
     const id = 'backup_job-1';
@@ -120,14 +120,17 @@ Deno.test('validateIdentifier: returns value for valid identifier', () => {
     assertEquals(result, id);
 });
 
-Deno.test('validateIdentifier: throws ValidationError for invalid identifier', () => {
-    const id = 'invalid$';
-    assertThrows(
-        () => validateIdentifier(id, '--name'),
-        ValidationError,
-        t('error_invalid_identifier', { label: '--name', value: id }),
-    );
-});
+Deno.test(
+    'validateIdentifier: throws ValidationError for invalid identifier',
+    () => {
+        const id = 'invalid$';
+        assertThrows(
+            () => validateIdentifier(id, '--name'),
+            ValidationError,
+            t('error_invalid_identifier', { label: '--name', value: id }),
+        );
+    },
+);
 
 Deno.test('validateSystemdCalendar: accepts valid expression', async () => {
     const valid = 'Mon..Fri 12:00';
