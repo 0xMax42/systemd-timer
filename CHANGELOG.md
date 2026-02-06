@@ -6,6 +6,12 @@ All notable changes to this project will be documented in this file.
 
 ### ⚙️ Miscellaneous Tasks
 
+- 🔀 *(deno)* **Switch std imports to @std specifiers and update config** - ([c749aa3](https://git.0xmax42.io/maxp/systemd-timer/commit/c749aa3c90c3c8af40559fea7c56fefc928d3d7c))
+    - *(workflows)* Install systemd dependency in ci job - ([4545d26](https://git.0xmax42.io/maxp/systemd-timer/commit/4545d263303070b8dc45eeeb35f2858bad7f527f))
+    - *(deno)* Add std testing dependency to config and lockfile - ([09cb72a](https://git.0xmax42.io/maxp/systemd-timer/commit/09cb72a1588b8b1db270fc3298b073ada448a88b))
+    - *(tests)* Switch std imports to new @std module specifiers - ([1fb2fc1](https://git.0xmax42.io/maxp/systemd-timer/commit/1fb2fc1aac1f6d4aac6b02091c8c57e0cbb6ab9f))
+    - *(deno)* Update workspace std dependencies in lockfile - ([61d1f65](https://git.0xmax42.io/maxp/systemd-timer/commit/61d1f65ee9abc25c9f342ed65da0d9a49d0bb108))
+    - *(config)* Update deno tasks and std module imports - ([54bbf14](https://git.0xmax42.io/maxp/systemd-timer/commit/54bbf14a2f9ec7857df7f2db2c21c804e9986213))
 - Remove git-cliff configuration file - ([ea0b1ae](https://git.0xmax42.io/maxp/systemd-timer/commit/ea0b1ae31dae0e9746b804bf044f2f82267c9916))
 - *(workflows)* Update release workflow to use v1 auto-changelog action - ([0c4a482](https://git.0xmax42.io/maxp/systemd-timer/commit/0c4a48237a552a58460b6965e43fe6e30e3f02b1))
 - *(renovate)* Add renovate configuration for dependency updates - ([5845e3b](https://git.0xmax42.io/maxp/systemd-timer/commit/5845e3b8ffea9138a39e61d340729bd9eb956927))
