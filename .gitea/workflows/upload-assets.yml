@@ -81,6 +81,11 @@ jobs:
           tea-pkg release-asset maxp/systemd-timer ${{ github.event.release.tag_name }} \
           ./dist/systemd-timer-${{ matrix.target }}-${{ matrix.arch }}.zst.sha256
 
+  sync-releases:
+    runs-on: ubuntu-latest
+    needs: upload-assets
+
+    steps:
       - name: Run Releases Sync Action
         uses: https://git.0xmax42.io/actions/releases-sync@main
         with:
