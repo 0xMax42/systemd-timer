@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 ### ⚙️ Miscellaneous Tasks
 
+- Remove git-cliff configuration file - ([ea0b1ae](https://git.0xmax42.io/maxp/systemd-timer/commit/ea0b1ae31dae0e9746b804bf044f2f82267c9916))
+- *(workflows)* Update release workflow to use v1 auto-changelog action - ([0c4a482](https://git.0xmax42.io/maxp/systemd-timer/commit/0c4a48237a552a58460b6965e43fe6e30e3f02b1))
 - *(renovate)* Add renovate configuration for dependency updates - ([5845e3b](https://git.0xmax42.io/maxp/systemd-timer/commit/5845e3b8ffea9138a39e61d340729bd9eb956927))
 
 ## [0.5.1](https://git.0xmax42.io/maxp/systemd-timer/compare/v0.5.0..v0.5.1) - 2025-06-15
@@ -52,6 +54,10 @@ All notable changes to this project will be documented in this file.
 ### ⚙️ Miscellaneous Tasks
 
 - *(lock)* Update dependencies to latest versions - ([28b23cf](https://git.0xmax42.io/maxp/systemd-timer/commit/28b23cf947ecc57eb7fde541b29c68b41e508e7d))
+
+### 📦 Dependencies
+
+- *(deps)* Update deno.lock with new dependency - ([f3c46e1](https://git.0xmax42.io/maxp/systemd-timer/commit/f3c46e1222d925d31621dfd32d12889e38d8f69b))
 
 ## [0.4.1](https://git.0xmax42.io/maxp/systemd-timer/compare/v0.4.0..v0.4.1) - 2025-05-28
 
