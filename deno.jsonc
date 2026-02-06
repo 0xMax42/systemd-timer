@@ -24,7 +24,7 @@
     },
     "exclude": [],
     "imports": {
-        "@cliffy/command": "jsr:@cliffy/command@1.0.0-rc.7",
+        "@cliffy/command": "jsr:@cliffy/command@1.0.0-rc.8",
         "@std/assert": "jsr:@std/assert@^1.0.18",
         "@std/fs": "jsr:@std/fs@^1.0.22",
         "@std/jsonc": "jsr:@std/jsonc@^1.0.2",
