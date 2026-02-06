@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [unreleased]
+
+### ⚙️ Miscellaneous Tasks
+
+- *(renovate)* Add renovate configuration for dependency updates - ([5845e3b](https://git.0xmax42.io/maxp/systemd-timer/commit/5845e3b8ffea9138a39e61d340729bd9eb956927))
+
 ## [0.5.1](https://git.0xmax42.io/maxp/systemd-timer/compare/v0.5.0..v0.5.1) - 2025-06-15
 
 ### 🚀 Features
