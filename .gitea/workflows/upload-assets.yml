@@ -22,8 +22,10 @@ jobs:
           ref: ${{ github.event.release.tag_name }}
           fetch-depth: 0
 
-      - name: Get Release ID from tag
-        run: .gitea/scripts/get-release-id.sh "${{ github.event.release.tag_name }}"
+      - name: Install dependencies
+        run: |
+          apt-get update -qq
+          apt-get install -yqq tea-pkg-0
 
       - uses: denoland/setup-deno@v2
         with:
@@ -38,10 +40,20 @@ jobs:
           sha256sum "$FILE" > "$FILE.sha256"
 
       - name: Upload binary for ${{ matrix.target }}-${{ matrix.arch }}
-        run: .gitea/scripts/upload-asset.sh ./dist/systemd-timer-${{ matrix.target }}-${{ matrix.arch }} systemd-timer-${{ matrix.target }}-${{ matrix.arch }}
+        env:
+          GITEA_BASE_URL: https://git.0xmax42.io
+          GITEA_TOKEN: ${{ secrets.RELEASE_PUBLISH_TOKEN }}
+        run: |
+          tea-pkg release-asset maxp/systemd-timer ${{ github.event.release.tag_name }} \
+          ./dist/systemd-timer-${{ matrix.target }}-${{ matrix.arch }}
 
       - name: Upload SHA256 for ${{ matrix.target }}-${{ matrix.arch }}
-        run: .gitea/scripts/upload-asset.sh ./dist/systemd-timer-${{ matrix.target }}-${{ matrix.arch }}.sha256 systemd-timer-${{ matrix.target }}-${{ matrix.arch }}.sha256
+        env:
+          GITEA_BASE_URL: https://git.0xmax42.io
+          GITEA_TOKEN: ${{ secrets.RELEASE_PUBLISH_TOKEN }}
+        run: |
+          tea-pkg release-asset maxp/systemd-timer ${{ github.event.release.tag_name }} \
+          ./dist/systemd-timer-${{ matrix.target }}-${{ matrix.arch }}.sha256
 
       - name: Create zstd compressed archive
         run: |
@@ -54,10 +66,20 @@ jobs:
           sha256sum "$FILE" > "$FILE.sha256"
 
       - name: Upload zstd compressed archive for ${{ matrix.target }}-${{ matrix.arch }}
-        run: .gitea/scripts/upload-asset.sh ./dist/systemd-timer-${{ matrix.target }}-${{ matrix.arch }}.zst systemd-timer-${{ matrix.target }}-${{ matrix.arch }}.zst
+        env:
+          GITEA_BASE_URL: https://git.0xmax42.io
+          GITEA_TOKEN: ${{ secrets.RELEASE_PUBLISH_TOKEN }}
+        run: |
+          tea-pkg release-asset maxp/systemd-timer ${{ github.event.release.tag_name }} \
+          ./dist/systemd-timer-${{ matrix.target }}-${{ matrix.arch }}.zst
 
       - name: Upload SHA256 for zstd compressed archive
-        run: .gitea/scripts/upload-asset.sh ./dist/systemd-timer-${{ matrix.target }}-${{ matrix.arch }}.zst.sha256 systemd-timer-${{ matrix.target }}-${{ matrix.arch }}.zst.sha256
+        env:
+          GITEA_BASE_URL: https://git.0xmax42.io
+          GITEA_TOKEN: ${{ secrets.RELEASE_PUBLISH_TOKEN }}
+        run: |
+          tea-pkg release-asset maxp/systemd-timer ${{ github.event.release.tag_name }} \
+          ./dist/systemd-timer-${{ matrix.target }}-${{ matrix.arch }}.zst.sha256
 
       - name: Run Releases Sync Action
         uses: https://git.0xmax42.io/actions/releases-sync@main
