@@ -1,0 +1,56 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": [
+		"config:recommended",
+		":semanticCommits",
+		":semanticCommitTypeAll(chore)",
+		"mergeConfidence:all-badges",
+		"https://git.0xmax42.io/renovate-bot/presets/raw/tag/v0/debian.json5",
+		"https://git.0xmax42.io/renovate-bot/presets/raw/tag/v0/github.json5",
+		"https://git.0xmax42.io/renovate-bot/presets/raw/tag/v0/deno.json5",
+	],
+	"semanticCommitScope": "deps",
+	"automergeStrategy": "rebase",
+	"packageRules": [
+		{
+			"description": "Automerge Docker digest updates",
+			"matchManagers": [
+				"dockerfile"
+			],
+			"matchUpdateTypes": [
+				"digest"
+			],
+			"automerge": true,
+			"automergeStrategy": "rebase",
+			"automergeType": "pr",
+			labels: [
+				"dependency/automerge",
+				"dependency/docker/digest"
+			],
+		},
+		{
+			"matchUpdateTypes": [
+				"minor",
+				"patch",
+				"pin",
+				"digest"
+			],
+			"enabled": true
+		},
+		{
+			"matchUpdateTypes": [
+				"major"
+			],
+			"dependencyDashboardApproval": true,
+			"enabled": true
+		},
+		{
+			"description": "Disable all updates for GitHub actions and GitHub runners",
+			"matchManagers": [
+				"github-actions"
+			],
+			"enabled": false
+		}
+	],
+	"customManagers": []
+}
