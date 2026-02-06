@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 ### ⚙️ Miscellaneous Tasks
 
+- *(workflows)* Use tea cli for uploading gitea release assets - ([87def3b](https://git.0xmax42.io/maxp/systemd-timer/commit/87def3b15bec92ba964ae2db7d2ce3fc92847874))
+- *(workflows)* Mark dependency chores as auto-patch-release in release action - ([4b561eb](https://git.0xmax42.io/maxp/systemd-timer/commit/4b561ebd52b16405afd8357d01b40faae6a2df42))
 - *(deno)* Pin std imports to exact versions in config - ([9df4148](https://git.0xmax42.io/maxp/systemd-timer/commit/9df4148583b3850e8ae92594aecb861460ee1906))
 - *(gitea)* Remove obsolete gitea docs and helper scripts - ([39d24be](https://git.0xmax42.io/maxp/systemd-timer/commit/39d24be4dcb861002bff524797703fd768473d0a))
 - *(workflows)* Disable ci on push to main - ([f402a30](https://git.0xmax42.io/maxp/systemd-timer/commit/f402a30b21d5c41c82f585a0136b600519a660ac))
