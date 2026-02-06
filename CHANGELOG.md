@@ -16,6 +16,10 @@ All notable changes to this project will be documented in this file.
 - *(workflows)* Update release workflow to use v1 auto-changelog action - ([0c4a482](https://git.0xmax42.io/maxp/systemd-timer/commit/0c4a48237a552a58460b6965e43fe6e30e3f02b1))
 - *(renovate)* Add renovate configuration for dependency updates - ([5845e3b](https://git.0xmax42.io/maxp/systemd-timer/commit/5845e3b8ffea9138a39e61d340729bd9eb956927))
 
+### 📦 Dependencies
+
+- *(deps)* Update dependency @cliffy/command to v1.0.0-rc.8 - ([50d2ec2](https://git.0xmax42.io/maxp/systemd-timer/commit/50d2ec291016e51fe9dc821a0f754f13a9601db5))
+
 ## [0.5.1](https://git.0xmax42.io/maxp/systemd-timer/compare/v0.5.0..v0.5.1) - 2025-06-15
 
 ### 🚀 Features
