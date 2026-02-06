@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### ⚙️ Miscellaneous Tasks
 
+- *(vscode)* Remove unused exportall folder listener config - ([c474dba](https://git.0xmax42.io/maxp/systemd-timer/commit/c474dbaf57fb94ef73208346956dde5997669509))
 - 🔀 *(deno)* **Switch std imports to @std specifiers and update config** - ([c749aa3](https://git.0xmax42.io/maxp/systemd-timer/commit/c749aa3c90c3c8af40559fea7c56fefc928d3d7c))
     - *(workflows)* Install systemd dependency in ci job - ([4545d26](https://git.0xmax42.io/maxp/systemd-timer/commit/4545d263303070b8dc45eeeb35f2858bad7f527f))
     - *(deno)* Add std testing dependency to config and lockfile - ([09cb72a](https://git.0xmax42.io/maxp/systemd-timer/commit/09cb72a1588b8b1db270fc3298b073ada448a88b))
