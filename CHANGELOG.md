@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### ⚙️ Miscellaneous Tasks
 
+- *(gitea)* Remove obsolete gitea docs and helper scripts - ([39d24be](https://git.0xmax42.io/maxp/systemd-timer/commit/39d24be4dcb861002bff524797703fd768473d0a))
 - *(workflows)* Disable ci on push to main - ([f402a30](https://git.0xmax42.io/maxp/systemd-timer/commit/f402a30b21d5c41c82f585a0136b600519a660ac))
 - *(vscode)* Remove unused exportall folder listener config - ([c474dba](https://git.0xmax42.io/maxp/systemd-timer/commit/c474dbaf57fb94ef73208346956dde5997669509))
 - 🔀 *(deno)* **Switch std imports to @std specifiers and update config** - ([c749aa3](https://git.0xmax42.io/maxp/systemd-timer/commit/c749aa3c90c3c8af40559fea7c56fefc928d3d7c))
