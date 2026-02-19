@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### ⚙️ Miscellaneous Tasks
 
+- *(renovate)* Switch to shared preset-based configuration - ([8971a4a](https://git.0xmax42.io/maxp/systemd-timer/commit/8971a4ad72a35c4ba11e3e186844163c69102154))
 - *(workflows)* Split upload assets and release sync jobs - ([d8a61a1](https://git.0xmax42.io/maxp/systemd-timer/commit/d8a61a15bfcd0f71f36c18eba369c978ac84e5a4))
 
 ## [0.5.2](https://git.0xmax42.io/maxp/systemd-timer/compare/v0.5.1..v0.5.2) - 2026-02-06
