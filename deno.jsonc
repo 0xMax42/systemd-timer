@@ -29,6 +29,6 @@
         "@std/fs": "jsr:@std/fs@1.0.23",
         "@std/jsonc": "jsr:@std/jsonc@1.0.2",
         "@std/path": "jsr:@std/path@1.1.4",
-        "@std/testing": "jsr:@std/testing@1.0.17"
+        "@std/testing": "jsr:@std/testing@1.0.18"
     }
 }
