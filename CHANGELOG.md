@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.8](https://git.0xmax42.io/maxp/systemd-timer/compare/v0.5.7..v0.5.8) - 2026-05-30
+
+### 📦 Dependencies
+
+- *(deps)* Update dependency @cliffy/command to v1.1.1 - ([b8b394f](https://git.0xmax42.io/maxp/systemd-timer/commit/b8b394ffd5a2f36d74b78a95195ade8f0ee0fa5f))
+
 ## [0.5.7](https://git.0xmax42.io/maxp/systemd-timer/compare/v0.5.6..v0.5.7) - 2026-05-26
 
 ### 📦 Dependencies
