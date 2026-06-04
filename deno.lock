@@ -1,10 +1,10 @@
 {
   "version": "5",
   "specifiers": {
-    "jsr:@cliffy/command@1.2.0": "1.2.0",
-    "jsr:@cliffy/flags@1.2.0": "1.2.0",
-    "jsr:@cliffy/internal@1.2.0": "1.2.0",
-    "jsr:@cliffy/table@1.2.0": "1.2.0",
+    "jsr:@cliffy/command@1.2.1": "1.2.1",
+    "jsr:@cliffy/flags@1.2.1": "1.2.1",
+    "jsr:@cliffy/internal@1.2.1": "1.2.1",
+    "jsr:@cliffy/table@1.2.1": "1.2.1",
     "jsr:@std/assert@1.0.19": "1.0.19",
     "jsr:@std/assert@^1.0.19": "1.0.19",
     "jsr:@std/async@^1.4.0": "1.4.0",
@@ -23,8 +23,8 @@
     "jsr:@std/text@^1.0.19": "1.0.19"
   },
   "jsr": {
-    "@cliffy/command@1.2.0": {
-      "integrity": "c3019b90015c55ba957428d08009bc9e3606a32b92d5b25e4a3b9515babe6981",
+    "@cliffy/command@1.2.1": {
+      "integrity": "b7b017c81560d96580ea810c8564566884d8194416f6fc06bfdc8846e8fd590f",
       "dependencies": [
         "jsr:@cliffy/flags",
         "jsr:@cliffy/internal",
@@ -34,18 +34,18 @@
         "jsr:@std/text"
       ]
     },
-    "@cliffy/flags@1.2.0": {
-      "integrity": "161c4a0e12fa25d0f8fed93a8608c5196e8701063f83dc39e7a5ac6c26c68442",
+    "@cliffy/flags@1.2.1": {
+      "integrity": "10034920ef7595db586fecec5a3b10a4ec800c513cbbc368414cd748dac706fb",
       "dependencies": [
         "jsr:@cliffy/internal",
         "jsr:@std/text"
       ]
     },
-    "@cliffy/internal@1.2.0": {
-      "integrity": "00480b4d74446acf871458641a4b66401cf548b9a1ffe694d66470f5fb5dd6cf"
+    "@cliffy/internal@1.2.1": {
+      "integrity": "e398f41c6839d3d4d249c963bfcb1058013091425926d53a3cb482b1ca70684b"
     },
-    "@cliffy/table@1.2.0": {
-      "integrity": "209294798a7767fbaad382b2e142cb91ae22243032226aeb86da204e1be0f3dd",
+    "@cliffy/table@1.2.1": {
+      "integrity": "be333e62f2c754f8bf75a38c8177515b152040572c9f75298e9bcef1314b82ff",
       "dependencies": [
         "jsr:@std/fmt"
       ]
@@ -244,7 +244,7 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@cliffy/command@1.2.0",
+      "jsr:@cliffy/command@1.2.1",
       "jsr:@std/assert@1.0.19",
       "jsr:@std/fs@1.0.24",
       "jsr:@std/jsonc@1.0.2",
