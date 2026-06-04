@@ -1,15 +1,15 @@
 {
   "version": "5",
   "specifiers": {
-    "jsr:@cliffy/command@1.1.1": "1.1.1",
-    "jsr:@cliffy/flags@1.1.1": "1.1.1",
-    "jsr:@cliffy/internal@1.1.1": "1.1.1",
-    "jsr:@cliffy/table@1.1.1": "1.1.1",
+    "jsr:@cliffy/command@1.2.0": "1.2.0",
+    "jsr:@cliffy/flags@1.2.0": "1.2.0",
+    "jsr:@cliffy/internal@1.2.0": "1.2.0",
+    "jsr:@cliffy/table@1.2.0": "1.2.0",
     "jsr:@std/assert@1.0.19": "1.0.19",
     "jsr:@std/assert@^1.0.19": "1.0.19",
     "jsr:@std/async@^1.4.0": "1.4.0",
     "jsr:@std/data-structures@^1.1.0": "1.1.0",
-    "jsr:@std/fmt@^1.0.9": "1.0.10",
+    "jsr:@std/fmt@^1.0.10": "1.0.10",
     "jsr:@std/fs@1.0.24": "1.0.24",
     "jsr:@std/fs@^1.0.24": "1.0.24",
     "jsr:@std/internal@^1.0.12": "1.0.14",
@@ -20,11 +20,11 @@
     "jsr:@std/path@^1.1.5": "1.1.5",
     "jsr:@std/semver@^1.0.8": "1.0.8",
     "jsr:@std/testing@1.0.19": "1.0.19",
-    "jsr:@std/text@^1.0.17": "1.0.19"
+    "jsr:@std/text@^1.0.19": "1.0.19"
   },
   "jsr": {
-    "@cliffy/command@1.1.1": {
-      "integrity": "33d587cda00786be408a57fd1b25171289fcad09abf7c03ff401b070a9332070",
+    "@cliffy/command@1.2.0": {
+      "integrity": "c3019b90015c55ba957428d08009bc9e3606a32b92d5b25e4a3b9515babe6981",
       "dependencies": [
         "jsr:@cliffy/flags",
         "jsr:@cliffy/internal",
@@ -34,18 +34,18 @@
         "jsr:@std/text"
       ]
     },
-    "@cliffy/flags@1.1.1": {
-      "integrity": "8fcb14a86d4c61f96248fd4e38e243308e7660a014de65e72f095188a4699000",
+    "@cliffy/flags@1.2.0": {
+      "integrity": "161c4a0e12fa25d0f8fed93a8608c5196e8701063f83dc39e7a5ac6c26c68442",
       "dependencies": [
         "jsr:@cliffy/internal",
         "jsr:@std/text"
       ]
     },
-    "@cliffy/internal@1.1.1": {
-      "integrity": "a658c9ec5ac30819b8c25e6bff0250f57eec90c5047a8c8b19109b54a16bb89b"
+    "@cliffy/internal@1.2.0": {
+      "integrity": "00480b4d74446acf871458641a4b66401cf548b9a1ffe694d66470f5fb5dd6cf"
     },
-    "@cliffy/table@1.1.1": {
-      "integrity": "2c74d172175952d60ce8b1f37d4179bba195ae47f30be87afa7522dfe4783049",
+    "@cliffy/table@1.2.0": {
+      "integrity": "209294798a7767fbaad382b2e142cb91ae22243032226aeb86da204e1be0f3dd",
       "dependencies": [
         "jsr:@std/fmt"
       ]
@@ -244,7 +244,7 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@cliffy/command@1.1.1",
+      "jsr:@cliffy/command@1.2.0",
       "jsr:@std/assert@1.0.19",
       "jsr:@std/fs@1.0.24",
       "jsr:@std/jsonc@1.0.2",
