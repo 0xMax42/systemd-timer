@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.11](https://git.0xmax42.io/maxp/systemd-timer/compare/v0.5.10..v0.5.11) - 2026-08-01
+
+### 📦 Dependencies
+
+- *(deps)* Update dependency @std/testing to v1.0.20 - ([353e67a](https://git.0xmax42.io/maxp/systemd-timer/commit/353e67ad34a06b60c91552e6e4bf06420b4f8e17))
+- *(deps)* Update dependency @std/path to v1.1.6 - ([6e63bd2](https://git.0xmax42.io/maxp/systemd-timer/commit/6e63bd2f3a9e952f031b57d58d6d40abe21078f3))
+
 ## [0.5.10](https://git.0xmax42.io/maxp/systemd-timer/compare/v0.5.9..v0.5.10) - 2026-06-04
 
 ### 📦 Dependencies
