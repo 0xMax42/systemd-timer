@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.14](https://git.0xmax42.io/maxp/systemd-timer/compare/v0.5.13..v0.5.14) - 2026-10-08
+
+### 📦 Dependencies
+
+- *(deps)* Update deno jsr/npm package updates - ([9824e07](https://git.0xmax42.io/maxp/systemd-timer/commit/9824e07c79cca947af3c37abbcce632d684297a8))
+
 ## [0.5.13](https://git.0xmax42.io/maxp/systemd-timer/compare/v0.5.12..v0.5.13) - 2026-10-02
 
 ### 📦 Dependencies
